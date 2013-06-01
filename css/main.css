@@ -36,6 +36,13 @@ table {
 
 /*****************************************************************************/
 /*
+/* Fonts
+/*
+/*****************************************************************************/
+@import url(http://fonts.googleapis.com/css?family=Quattrocento+Sans);
+
+/*****************************************************************************/
+/*
 /* Home
 /*
 /*****************************************************************************/
@@ -50,7 +57,7 @@ ul.posts li {
 
 ul.posts span {
   color: #aaa;
-  font-family: Monaco, "Courier New", monospace;
+  font-family: 'Quattrocento Sans', sans-serif;
   font-size: 80%;
 }
 
