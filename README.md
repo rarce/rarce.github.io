@@ -24,3 +24,12 @@ Update
 ```
 gem update github-pages
 ```
+
+Redirect From Plugin
+____________________
+
+To redirect a page from /foo, add the following to the top of the page:
+
+---
+redirect_from: "/foo"
+---
