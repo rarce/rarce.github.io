@@ -10,7 +10,8 @@ twitter_username: rarce
 github_username:  rarce
 
 # Build settings
-markdown: kramdown
+highlighter: pygments
+markdown: redcarpet
 
 gems:
   - jekyll-sitemap
