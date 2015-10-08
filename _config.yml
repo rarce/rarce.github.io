@@ -2,7 +2,7 @@
 title: Roberto Arce
 email:
 description: > # this means to ignore newlines until "baseurl:"
-  Roberto Arce's tech blog, I (plan to) write about web analytics, dataviz,
+  Roberto Arce's tech blog, I (hope to) write about web analytics, dataviz,
   machine learning, and other stuff of my interest
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://rarce.github.io" # the base hostname & protocol for your site
