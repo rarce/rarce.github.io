@@ -11,8 +11,6 @@ github_username:  rarce
 disqus_shortname: robertoarceblog
 
 # Build settings
-highlighter: pygments
-markdown: redcarpet
 
 gems:
   - jekyll-sitemap
