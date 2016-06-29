@@ -1,0 +1,1385 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Roberto Andres Arce Echanes</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <style>
+      .clear-margin {
+  margin: 0;
+}
+.space-top {
+  margin-top: 10px;
+}
+.space-right {
+  margin-right: 10px;
+}
+.icon-left {
+  margin-right: 5px;
+}
+.icon-right {
+  margin-left: 5px;
+}
+.labels {
+  word-spacing: 5px;
+  line-height: 2;
+}
+.label-keyword {
+  display: inline-block;
+  background: #7eb0db;
+  color: white;
+  font-size: 0.9em;
+  padding: 5px;
+  border: 1px solid #357ebd;
+}
+.link-disguise {
+  color: inherit;
+}
+.link-disguise:hover {
+  color: inherit;
+}
+@media (max-width: 992px) {
+  .clear-margin-sm {
+    margin-bottom: 0;
+  }
+}
+body {
+  font-family: 'Lato';
+  background: #f0f0f0;
+  color: #333333;
+}
+.main {
+  padding: 5px;
+}
+.card {
+  background: #ffffff;
+  border: 1px solid #e6e6e6;
+  border-radius: 3px;
+  min-height: 300px;
+  padding: 10px;
+}
+.card-nested {
+  min-height: 0;
+  margin-bottom: 10px;
+  border-width: 1px 0 0 0;
+}
+.card-nested:before,
+.card-nested:after {
+  content: " ";
+  display: table;
+}
+.card-nested:after {
+  clear: both;
+}
+@media (max-width: 480px) {
+  .card-nested {
+    padding: 5px 0;
+  }
+}
+.background-card {
+  padding: 10px 20px;
+}
+.card-wrapper {
+  padding: 5px;
+}
+@media (max-width: 992px) {
+  .card-wrapper {
+    float: none !important;
+  }
+}
+.text-bolder {
+  font-weight: bold;
+}
+.background-details .detail {
+  display: table;
+  padding: 10px 0;
+}
+.background-details .detail .icon {
+  min-width: 45px;
+  max-width: 45px;
+  text-align: center;
+}
+.background-details .detail .info {
+  width: 100%;
+}
+.background-details .detail .title,
+.background-details .detail .icon {
+  color: #707070;
+}
+.background-details .detail .mobile-title {
+  display: none;
+}
+@media (max-width: 480px) {
+  .background-details .detail .mobile-title {
+    display: inline-block;
+    margin-left: 5px;
+    font-weight: bold;
+    text-transform: uppercase;
+    vertical-align: middle;
+  }
+}
+.background-details .detail .icon,
+.background-details .detail .info {
+  display: table-cell;
+  padding: 0 10px;
+}
+@media (max-width: 480px) {
+  .background-details .detail {
+    display: block;
+  }
+  .background-details .detail .icon {
+    max-width: inherit;
+    min-width: inherit;
+    text-align: left;
+  }
+  .background-details .detail .icon,
+  .background-details .detail .info {
+    display: block;
+    padding: 10px 0;
+  }
+  .background-details .detail .title {
+    display: none;
+  }
+}
+.info .content.has-sidebar {
+  width: 80%;
+  box-sizing: border-box;
+  float: left;
+  padding: 0 10px;
+  border-right: 1px solid #cdcdcd;
+}
+@media (max-width: 992px) {
+  .info .content.has-sidebar {
+    width: 100%;
+    border-right: 0;
+  }
+}
+@media (max-width: 480px) {
+  .info .content.has-sidebar {
+    padding: 0 2px;
+  }
+}
+.info .sidebar {
+  margin-left: 80%;
+  box-sizing: border-box;
+  padding: 10px;
+}
+@media (max-width: 480px) {
+  ul {
+    padding-left: 25px;
+  }
+}
+/*
+    Credits: http://codyhouse.co/demo/smart-fixed-navigation/index.html
+*/
+.floating-nav-trigger {
+  width: 50px;
+  height: 50px;
+  -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.24);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.24);
+  -webkit-transition: background-color 0.5s ease;
+  -o-transition: background-color 0.5s ease;
+  transition: background-color 0.5s ease;
+  display: block;
+  border-radius: 50%;
+  text-align: center;
+  padding-top: 10px;
+  background-color: white;
+  font-size: 1.5em;
+  color: #357ebd;
+  z-index: 100;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+}
+.floating-nav-trigger .close-icon {
+  display: none;
+}
+.floating-nav-trigger:hover {
+  color: #1f496e;
+  background-color: #e6e6e6;
+  text-decoration: none;
+}
+.floating-nav-trigger.is-open {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.floating-nav-trigger.is-open .close-icon {
+  display: inherit;
+}
+.floating-nav-trigger.is-open .fa-bars {
+  display: none;
+}
+.floating-nav-trigger.is-open:hover {
+  background-color: white;
+}
+.floating-nav {
+  -webkit-transform: scale(0);
+  -ms-transform: scale(0);
+  -o-transform: scale(0);
+  transform: scale(0);
+  -webkit-transform-origin: 100% 100%;
+  -moz-transform-origin: 100% 100%;
+  -ms-transform-origin: 100% 100%;
+  transform-origin: 100% 100%;
+  -webkit-transition: transform 0.3s, visibility 0s 0.3s;
+  -o-transition: transform 0.3s, visibility 0s 0.3s;
+  transition: transform 0.3s, visibility 0s 0.3s;
+  -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.24);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.24);
+  position: fixed;
+  z-index: 50;
+  right: 10px;
+  bottom: 10px;
+  background-color: white;
+  width: 90%;
+  max-width: 400px;
+  visibility: hidden;
+  overflow: hidden;
+}
+.floating-nav ul {
+  font-size: 1.2em;
+  margin: 0;
+}
+.floating-nav ul li {
+  border-bottom: 1px solid #eff2f6;
+}
+.floating-nav ul li a {
+  padding: 20px;
+  text-decoration: none;
+  color: #357ebd;
+  display: block;
+}
+.floating-nav ul li a:hover {
+  color: #1f496e;
+}
+.floating-nav ul li i.fa {
+  margin-right: 10px;
+}
+.floating-nav ul li:last-child {
+  border-bottom: 0;
+}
+.floating-nav.is-visible {
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  -o-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition: transform 0.3s, visibility 0s 0s;
+  -o-transition: transform 0.3s, visibility 0s 0s;
+  transition: transform 0.3s, visibility 0s 0s;
+  visibility: visible;
+}
+@media (max-width: 992px) {
+  .profile-card-wrapper {
+    position: relative;
+  }
+}
+.profile-pic {
+  padding: 20px 0;
+}
+@media (max-width: 992px) {
+  .profile-pic {
+    padding: 10px 0;
+  }
+}
+.profile-pic img {
+  width: 100px;
+  height: 100px;
+}
+@media (max-width: 992px) {
+  .name {
+    margin-top: 10px;
+  }
+}
+@media (max-width: 768px) {
+  .contact-details {
+    text-align: center;
+  }
+}
+.contact-details .detail {
+  display: table;
+  padding: 10px 0;
+}
+.contact-details .detail .icon {
+  padding: 0 10px;
+  color: #707070;
+}
+@media (max-width: 992px) {
+  .contact-details .detail .icon {
+    padding: 0 5px 0 0;
+  }
+}
+.contact-details .detail .info {
+  font-size: 0.8em;
+}
+.contact-details .detail .icon,
+.contact-details .detail .info {
+  display: table-cell;
+  vertical-align: middle;
+}
+@media (max-width: 768px) {
+  .contact-details .detail {
+    position: relative;
+    float: left;
+    width: 100%;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+@media (max-width: 992px) {
+  .contact-details .detail {
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding: 10px;
+  }
+  .contact-details .detail .icon,
+  .contact-details .detail .info {
+    display: inline-block;
+  }
+}
+@media (max-width: 992px) and (min-width: 768px) {
+  .contact-details .detail {
+    float: left;
+    width: 25%;
+  }
+}
+.social-links {
+  line-height: 2.5;
+}
+.social-link {
+  margin-left: 5px;
+  min-width: 35px;
+  display: inline-block;
+}
+.social-link:first-child {
+  margin-left: 0;
+}
+.social-link:hover {
+  text-decoration: none;
+}
+.link-github {
+  color: #454545;
+}
+.link-github:hover,
+.link-github:focus {
+  text-decoration: none;
+  color: #2b2b2b;
+}
+.link-twitter {
+  color: #33ccff;
+}
+.link-twitter:hover,
+.link-twitter:focus {
+  text-decoration: none;
+  color: #00bfff;
+}
+.link-blog {
+  color: #f36f24;
+}
+.link-blog:hover,
+.link-blog:focus {
+  text-decoration: none;
+  color: #d8560c;
+}
+.link-linkedin {
+  color: #007bb6;
+}
+.link-linkedin:hover,
+.link-linkedin:focus {
+  text-decoration: none;
+  color: #005983;
+}
+.link-skype {
+  color: #12a5f4;
+}
+.link-skype:hover,
+.link-skype:focus {
+  text-decoration: none;
+  color: #0986ca;
+}
+.link-stackoverflow {
+  color: #8e8e92;
+}
+.link-stackoverflow:hover,
+.link-stackoverflow:focus {
+  text-decoration: none;
+  color: #747479;
+}
+.link-soundcloud {
+  color: #e8822d;
+}
+.link-soundcloud:hover,
+.link-soundcloud:focus {
+  text-decoration: none;
+  color: #cc6916;
+}
+.link-pinterest {
+  color: #bd091f;
+}
+.link-pinterest:hover,
+.link-pinterest:focus {
+  text-decoration: none;
+  color: #8c0717;
+}
+.link-vimeo {
+  color: #17b3e8;
+}
+.link-vimeo:hover,
+.link-vimeo:focus {
+  text-decoration: none;
+  color: #128fba;
+}
+.link-behance {
+  color: #2c98cf;
+}
+.link-behance:hover,
+.link-behance:focus {
+  text-decoration: none;
+  color: #2379a5;
+}
+.link-codepen {
+  color: #1c1c1c;
+}
+.link-codepen:hover,
+.link-codepen:focus {
+  text-decoration: none;
+  color: #020202;
+}
+.link-foursquare {
+  color: #fa4778;
+}
+.link-foursquare:hover,
+.link-foursquare:focus {
+  text-decoration: none;
+  color: #f91554;
+}
+.link-reddit {
+  color: #545454;
+}
+.link-reddit:hover,
+.link-reddit:focus {
+  text-decoration: none;
+  color: #3b3b3b;
+}
+.link-spotify {
+  color: #acd200;
+}
+.link-spotify:hover,
+.link-spotify:focus {
+  text-decoration: none;
+  color: #829f00;
+}
+.link-dribbble {
+  color: #ce366f;
+}
+.link-dribbble:hover,
+.link-dribbble:focus {
+  text-decoration: none;
+  color: #a82959;
+}
+.link-facebook {
+  color: #4b6daa;
+}
+.link-facebook:hover,
+.link-facebook:focus {
+  text-decoration: none;
+  color: #3b5687;
+}
+.link-angellist {
+  color: #000000;
+}
+.link-angellist:hover,
+.link-angellist:focus {
+  text-decoration: none;
+  color: #000000;
+}
+.link-bitbucket {
+  color: #205081;
+}
+.link-bitbucket:hover,
+.link-bitbucket:focus {
+  text-decoration: none;
+  color: #163758;
+}
+.card-skills {
+  position: relative;
+}
+.skill-level {
+  border-radius: 3px;
+  position: absolute;
+  top: 10px;
+  bottom: 10px;
+  left: 0;
+  width: 10px;
+  box-shadow: inset 0 0 1px rgba(0, 0, 0, 0.2);
+}
+.skill-level .skill-progress {
+  position: absolute;
+  border-radius: 3px;
+  bottom: 0;
+  width: 100%;
+  -webkit-transition: height 1s ease;
+}
+.skill-level .skill-progress.beginner {
+  height: 50%;
+  background: #e74c3c;
+}
+.skill-level .skill-progress.intermediate {
+  height: 70%;
+  background: #f1c40f;
+}
+.skill-level .skill-progress.advanced {
+  height: 80%;
+  background: #428bca;
+}
+.skill-level .skill-progress.master {
+  height: 95%;
+  background: #5cb85c;
+}
+.skill-info {
+  margin-left: 10px;
+}
+@media (max-width: 480px) {
+  .skill-info {
+    margin-left: 20px;
+  }
+}
+@media (max-width: 768px) {
+  .quote {
+    font-size: inherit;
+  }
+}
+@media print {
+  a[href]:after {
+    content: none !important;
+  }
+  .profile-card {
+    text-align: center;
+  }
+  .profile-pic {
+    display: inline-block;
+    vertical-align: middle;
+  }
+  .profile-pic img {
+    border-radius: 0;
+  }
+  .name-and-profession {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 15px;
+  }
+  .contact-details .detail {
+    position: relative;
+    float: left;
+    width: 25%;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding: 0;
+  }
+  .floating-nav,
+  .floating-nav-trigger {
+    display: none;
+  }
+  .pagebreak {
+    page-break-before: always;
+  }
+}
+
+    </style>
+  </head>
+
+  <body itemscope itemtype="http://schema.org/Person">
+    <script>
+      window.onload = function () {
+        var toggleFloatingMenu = function() {
+          $( '.js-floating-nav' ).toggleClass( 'is-visible' );
+          $( '.js-floating-nav-trigger' ).toggleClass( 'is-open' );
+        };
+
+        $( ".background-card" ).css( "min-height", window.screen.availHeight + "px" );
+        $( ".js-tooltip" ).tooltip();
+        $( '.js-floating-nav-trigger' ).on( 'click', function(e) {
+          e.preventDefault();
+          toggleFloatingMenu();
+        });
+        $( '.js-floating-nav a' ).on( 'click', toggleFloatingMenu );
+      }
+    </script>
+    <div class="container-fluid">
+      <div class="row main clearfix">
+        <a href="#" class="js-floating-nav-trigger floating-nav-trigger">
+          <i class="fa fa-bars"></i>
+          <span class="close-icon">&times;</span>
+        </a>
+        <nav class="floating-nav js-floating-nav">
+          <ul class="list-unstyled">
+            <li>
+              <a href="#about">
+                <i class="fa fa-user"></i>
+                About
+              </a>
+            </li>
+            <li>
+              <a href="#work-experience">
+                <i class="fa fa-building"></i>
+                Work Experience
+              </a>
+            </li>
+            <li>
+              <a href="#skills">
+                <i class="fa fa-code"></i>
+                Skills
+              </a>
+            </li>
+            <li>
+              <a href="#education">
+                <i class="fa fa-mortar-board"></i>
+                Education
+              </a>
+            </li>
+              <li>
+                <a href="#awards">
+                  <i class="fa fa-trophy"></i>
+                  Awards
+                </a>
+              </li>
+              <li>
+                <a href="#interests">
+                  <i class="fa fa-heart"></i>
+                  Interests
+                </a>
+              </li>
+              <li>
+                <a href="#references">
+                  <i class="fa fa-thumbs-up"></i>
+                  References
+                </a>
+              </li>
+          </ul>
+        </nav>
+
+        <section class="col-md-3 card-wrapper profile-card-wrapper affix">
+          <div class="card profile-card">
+              <span class="profile-pic-container">
+                <div class="profile-pic">
+                  <img class="media-object img-circle center-block"  data-src="holder.js"
+                    alt="Roberto Andres Arce Echanes" src="https://s.gravatar.com/avatar/d8e68d7e789e4d371a4c1ac56c3c743d?s=300" itemprop="image">
+                </div>
+
+                <div class="name-and-profession">
+                  <h3 class="text-center text-bolder name" itemprop="name"> Roberto Andres Arce Echanes</h3>
+                  <h5 class="text-muted text-center" itemprop="jobTitle">Customer Intelligence Manager</h5>
+                </div>
+              </span>
+              <hr>
+
+              <div class="contact-details clearfix">
+
+                  <div class="detail">
+                    <span class="icon">
+                      <i class="fa fa-lg fa-location-arrow"></i>
+                    </span>
+
+                      <span class="info">
+                        Curauma, Valparaíso,
+                        CL
+                      </span>
+                  </div>
+
+                  <div class="detail">
+                    <span class="icon">
+                      <i class="fa fa-lg fa-phone"></i>
+                    </span>
+
+                    <span class="info" itemprop="telephone">
+                      +56 9 7175 2751
+                    </span>
+                  </div>
+
+                  <div class="detail">
+                    <span class="icon">
+                      <i class="fa fa-lg fa-envelope"></i>
+                    </span>
+
+                    <span class="info">
+                      <a href="mailto:robertoarcee@gmail.com" class="link-disguise" itemprop="email">robertoarcee@gmail.com</a>
+                    </span>
+                  </div>
+
+                  <div class="detail">
+                    <span class="icon" title="Languages I speak">
+                      <i class="fa fa-lg fa-language"></i>
+                    </span>
+
+                    <span class="info">
+                      English
+                    </span>
+                  </div>
+              </div>
+
+              <hr>
+
+              <div class="social-links text-center">
+                  <a class="fa fa-linkedin fa-2x social-link link-linkedin"
+                       href="http://cl.linkedin.com/in/robertoarceechanes/" target="_blank"></a>
+                  <a class="fa fa-github fa-2x social-link link-github"
+                       href="//github.com/rarce" target="_blank"></a>
+              </div>
+          </div>
+        </section>
+
+        <section class="col-md-9 card-wrapper pull-right">
+          <div class="card background-card">
+            <h4 class="text-uppercase text-bolder">Background</h4>
+            <hr>
+
+            <div class="background-details">
+              <div class="detail" id="about">
+                <div class="icon">
+                  <i class="fa fa-lg fa-user"></i>
+                  <span class="mobile-title">About</span>
+                </div>
+                <div class="info">
+                  <h4 class="title text-uppercase">
+                    About
+                  </h4>
+
+                  <div class="content" itemprop="description">
+                    I’m a highly analytical person, with a strong formation and experience in IT and data analysis. I&#x27;m interested in Internet business, new technologies, data analysis and data visualisation . I&#x27;m also interested in financial economics and financial markets. I&#x27;m married and have two little children.
+                  </div>
+                </div>
+              </div>
+
+              <div class="detail" id="work-experience">
+                <div class="icon">
+                  <i class="fa fa-lg fa-building"></i>
+                  <span class="mobile-title">Work Experience</span>
+                </div>
+                <div class="info">
+                  <h4 class="title text-uppercase">
+                    Work Experience
+                  </h4>
+
+                  <ul class="list-unstyled">
+                      <li class="card card-nested clearfix">
+                        <div class="content has-sidebar">
+                          <p class="clear-margin-sm">
+                            <strong>Customer Intelligence Manager</strong>,&nbsp;ComparaOnline
+                          </p>
+                          <p class="text-muted visible-xs visible-sm">
+                            <small>
+                              <span class="space-right">
+                                Mar, 2013 -
+                                  Present
+                              </span>
+
+                                <span>
+                                  <i class="fa fa-clock-o icon-left"></i>
+                                  1 year 10 months
+                                </span>
+                            </small>
+                          </p>
+                          <p>Develop a customer centric view of the business and work in the tracking a reporting tools to build it</p>
+                            <ul>
+                                <li> build datawarehouse with customer and marketing data </li>
+                                <li> build reports using microstrategy intelligence server </li>
+                            </ul>
+                        </div>
+
+                        <div class="sidebar text-muted text-center hidden-xs hidden-sm">
+                            <p>
+                              <strong>Joined:</strong>&nbsp;
+                              Mar, 2013
+                            </p>
+
+                            <p>
+                                <span class="label label-success">
+                                  Currently Working
+                                </span>
+                            </p>
+                            <p>
+                              <i class="fa fa-clock-o icon-left"></i>
+                              1 year 10 months
+                            </p>
+                        </div>
+                      </li>
+                      <li class="card card-nested clearfix">
+                        <div class="content has-sidebar">
+                          <p class="clear-margin-sm">
+                            <strong>Marketing IT Project Manager</strong>,&nbsp;ComparaOnline
+                          </p>
+                          <p class="text-muted visible-xs visible-sm">
+                            <small>
+                              <span class="space-right">
+                                Jan, 2013 -
+                                  Feb, 2014
+                              </span>
+
+                                <span>
+                                  <i class="fa fa-clock-o icon-left"></i>
+                                  1 year 1 month
+                                </span>
+                            </small>
+                          </p>
+                          <p>In charge of develop the font-end side of the website application, also the web analytics and tracking code implementation</p>
+                            <ul>
+                                <li> implement email marketing automatization tool </li>
+                                <li> use a/b testing to improve conversion rate in landing pages </li>
+                                <li> improve web tracking implementing tag manager, universal analytics and offline conversions tracking </li>
+                            </ul>
+                        </div>
+
+                        <div class="sidebar text-muted text-center hidden-xs hidden-sm">
+                            <p>
+                              <strong>Joined:</strong>&nbsp;
+                              Jan, 2013
+                            </p>
+
+                            <p>
+                                <strong>Left:</strong>&nbsp;
+                                Feb, 2014
+                            </p>
+                            <p>
+                              <i class="fa fa-clock-o icon-left"></i>
+                              1 year 1 month
+                            </p>
+                        </div>
+                      </li>
+                      <li class="card card-nested clearfix">
+                        <div class="content has-sidebar">
+                          <p class="clear-margin-sm">
+                            <strong>Senior Web Developer</strong>,&nbsp;ComparaOnline
+                          </p>
+                          <p class="text-muted visible-xs visible-sm">
+                            <small>
+                              <span class="space-right">
+                                Feb, 2012 -
+                                  Dec, 2012
+                              </span>
+
+                                <span>
+                                  <i class="fa fa-clock-o icon-left"></i>
+                                  10 months
+                                </span>
+                            </small>
+                          </p>
+                          <p>Work as a full stack developer on the website application with ruby on rails framework</p>
+                            <ul>
+                                <li> implent several payments method for product running in 10 countries </li>
+                            </ul>
+                        </div>
+
+                        <div class="sidebar text-muted text-center hidden-xs hidden-sm">
+                            <p>
+                              <strong>Joined:</strong>&nbsp;
+                              Feb, 2012
+                            </p>
+
+                            <p>
+                                <strong>Left:</strong>&nbsp;
+                                Dec, 2012
+                            </p>
+                            <p>
+                              <i class="fa fa-clock-o icon-left"></i>
+                              10 months
+                            </p>
+                        </div>
+                      </li>
+                      <li class="card card-nested clearfix">
+                        <div class="content has-sidebar">
+                          <p class="clear-margin-sm">
+                            <strong>Junior Researcher - Project Macropinion</strong>,&nbsp;UTFSM
+                          </p>
+                          <p class="text-muted visible-xs visible-sm">
+                            <small>
+                              <span class="space-right">
+                                Sep, 2009 -
+                                  Nov, 2009
+                              </span>
+
+                                <span>
+                                  <i class="fa fa-clock-o icon-left"></i>
+                                  2 months
+                                </span>
+                            </small>
+                          </p>
+                          <p>Research in NLP and social networks.</p>
+                        </div>
+
+                        <div class="sidebar text-muted text-center hidden-xs hidden-sm">
+                            <p>
+                              <strong>Joined:</strong>&nbsp;
+                              Sep, 2009
+                            </p>
+
+                            <p>
+                                <strong>Left:</strong>&nbsp;
+                                Nov, 2009
+                            </p>
+                            <p>
+                              <i class="fa fa-clock-o icon-left"></i>
+                              2 months
+                            </p>
+                        </div>
+                      </li>
+                      <li class="card card-nested clearfix">
+                        <div class="content has-sidebar">
+                          <p class="clear-margin-sm">
+                            <strong>SysAdmin Lab Ada Lovelace</strong>,&nbsp;UTFSM
+                          </p>
+                          <p class="text-muted visible-xs visible-sm">
+                            <small>
+                              <span class="space-right">
+                                Mar, 2009 -
+                                  Dec, 2009
+                              </span>
+
+                                <span>
+                                  <i class="fa fa-clock-o icon-left"></i>
+                                  9 months
+                                </span>
+                            </small>
+                          </p>
+                          <p>Computer lab sysadmin and support for R&amp;D projects.</p>
+                        </div>
+
+                        <div class="sidebar text-muted text-center hidden-xs hidden-sm">
+                            <p>
+                              <strong>Joined:</strong>&nbsp;
+                              Mar, 2009
+                            </p>
+
+                            <p>
+                                <strong>Left:</strong>&nbsp;
+                                Dec, 2009
+                            </p>
+                            <p>
+                              <i class="fa fa-clock-o icon-left"></i>
+                              9 months
+                            </p>
+                        </div>
+                      </li>
+                      <li class="card card-nested clearfix">
+                        <div class="content has-sidebar">
+                          <p class="clear-margin-sm">
+                            <strong>Web Developer</strong>,&nbsp;USM-AEXA
+                          </p>
+                          <p class="text-muted visible-xs visible-sm">
+                            <small>
+                              <span class="space-right">
+                                Sep, 2008 -
+                                  Nov, 2008
+                              </span>
+
+                                <span>
+                                  <i class="fa fa-clock-o icon-left"></i>
+                                  2 months
+                                </span>
+                            </small>
+                          </p>
+                          <p>Web developer and IT support.</p>
+                        </div>
+
+                        <div class="sidebar text-muted text-center hidden-xs hidden-sm">
+                            <p>
+                              <strong>Joined:</strong>&nbsp;
+                              Sep, 2008
+                            </p>
+
+                            <p>
+                                <strong>Left:</strong>&nbsp;
+                                Nov, 2008
+                            </p>
+                            <p>
+                              <i class="fa fa-clock-o icon-left"></i>
+                              2 months
+                            </p>
+                        </div>
+                      </li>
+                      <li class="card card-nested clearfix">
+                        <div class="content has-sidebar">
+                          <p class="clear-margin-sm">
+                            <strong>Junior Researcher</strong>,&nbsp;Aprendaris Project - Ifitec SA
+                          </p>
+                          <p class="text-muted visible-xs visible-sm">
+                            <small>
+                              <span class="space-right">
+                                Jun, 2007 -
+                                  Jan, 2008
+                              </span>
+
+                                <span>
+                                  <i class="fa fa-clock-o icon-left"></i>
+                                  7 months
+                                </span>
+                            </small>
+                          </p>
+                          <p>Research and developer in semantic web for Fondef project Aprendaris</p>
+                        </div>
+
+                        <div class="sidebar text-muted text-center hidden-xs hidden-sm">
+                            <p>
+                              <strong>Joined:</strong>&nbsp;
+                              Jun, 2007
+                            </p>
+
+                            <p>
+                                <strong>Left:</strong>&nbsp;
+                                Jan, 2008
+                            </p>
+                            <p>
+                              <i class="fa fa-clock-o icon-left"></i>
+                              7 months
+                            </p>
+                        </div>
+                      </li>
+                      <li class="card card-nested clearfix">
+                        <div class="content has-sidebar">
+                          <p class="clear-margin-sm">
+                            <strong>Internship</strong>,&nbsp;Lab Inca - UTFSM
+                          </p>
+                          <p class="text-muted visible-xs visible-sm">
+                            <small>
+                              <span class="space-right">
+                                Dec, 2005 -
+                                  Feb, 2006
+                              </span>
+
+                                <span>
+                                  <i class="fa fa-clock-o icon-left"></i>
+                                  2 months
+                                </span>
+                            </small>
+                          </p>
+                          <p>Research in computational intelligence methods applied to time series forecasting.</p>
+                        </div>
+
+                        <div class="sidebar text-muted text-center hidden-xs hidden-sm">
+                            <p>
+                              <strong>Joined:</strong>&nbsp;
+                              Dec, 2005
+                            </p>
+
+                            <p>
+                                <strong>Left:</strong>&nbsp;
+                                Feb, 2006
+                            </p>
+                            <p>
+                              <i class="fa fa-clock-o icon-left"></i>
+                              2 months
+                            </p>
+                        </div>
+                      </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="detail" id="skills">
+                <div class="icon">
+                  <i class="fa fa-lg fa-code"></i>
+                  <span class="mobile-title">Skills</span>
+                </div>
+                <div class="info">
+                  <h4 class="title text-uppercase">
+                    Skills
+                  </h4>
+
+                  <div class="content">
+                    <ul class="list-unstyled">
+                        <li class="card card-nested card-skills">
+                            <div class="skill-level js-tooltip" title="Advanced" data-placement="left">
+                              <div class="skill-progress advanced">
+                              </div>
+                            </div>
+                          <div class="skill-info">
+                            <strong>Programming and Webdev</strong>
+
+                            <div class="space-top labels">
+                                <span class="label label-keyword">Ruby</span>
+                                <span class="label label-keyword">Python</span>
+                                <span class="label label-keyword">R</span>
+                                <span class="label label-keyword">Rails</span>
+                                <span class="label label-keyword">HTML</span>
+                                <span class="label label-keyword">Javascript</span>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="card card-nested card-skills">
+                            <div class="skill-level js-tooltip" title="Advanced" data-placement="left">
+                              <div class="skill-progress advanced">
+                              </div>
+                            </div>
+                          <div class="skill-info">
+                            <strong>Databases</strong>
+
+                            <div class="space-top labels">
+                                <span class="label label-keyword">Mysql</span>
+                                <span class="label label-keyword">Postgres</span>
+                                <span class="label label-keyword">SQL</span>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="card card-nested card-skills">
+                            <div class="skill-level js-tooltip" title="Intermediate" data-placement="left">
+                              <div class="skill-progress intermediate">
+                              </div>
+                            </div>
+                          <div class="skill-info">
+                            <strong>Econometrics and scientific software</strong>
+
+                            <div class="space-top labels">
+                                <span class="label label-keyword">Matlab</span>
+                                <span class="label label-keyword">R</span>
+                                <span class="label label-keyword">Stata</span>
+                                <span class="label label-keyword">Python (numpy)</span>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="card card-nested card-skills">
+                            <div class="skill-level js-tooltip" title="Intermediate" data-placement="left">
+                              <div class="skill-progress intermediate">
+                              </div>
+                            </div>
+                          <div class="skill-info">
+                            <strong>BI and Data Analysis</strong>
+
+                            <div class="space-top labels">
+                                <span class="label label-keyword">Google Analytics</span>
+                                <span class="label label-keyword">Microstrategy</span>
+                                <span class="label label-keyword">Tableau</span>
+                            </div>
+                          </div>
+                        </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div class="detail" id="education">
+                <div class="icon">
+                  <i class="fa fa-lg fa-mortar-board"></i>
+                  <span class="mobile-title">Education</span>
+                </div>
+                <div class="info">
+                  <h4 class="title text-uppercase">
+                    Education
+                  </h4>
+
+                  <div class="content">
+                    <ul class="list-unstyled">
+                        <li class="card card-nested">
+                          <div class="content has-sidebar">
+                            <p class="clear-margin-sm">
+                              <strong>Master in Economics, unfinished</strong>,&nbsp;
+                              Pontificia Universidad Católica de Chile
+                            </p>
+                            <p class="visible-xs visible-sm text-muted">
+                              <small>
+                                Dec, 2009 -
+                                  Dec, 2011
+                              </small>
+                            </p>
+                            <i></i>
+                            <div class="space-top labels">
+                            </div>
+                          </div>
+                          <div class="sidebar text-muted text-center hidden-xs hidden-sm">
+                            <p>
+                              <strong>Started:</strong>&nbsp;
+                              Dec, 2009
+                            </p>
+                            <p>
+                                <strong>Completion:</strong>&nbsp;
+                                Dec, 2011
+                            </p>
+                          </div>
+                        </li>
+                        <li class="card card-nested">
+                          <div class="content has-sidebar">
+                            <p class="clear-margin-sm">
+                              <strong>MSc Informatics Engineering, unfinished</strong>,&nbsp;
+                              Universidad Técnica Federico Santa María
+                            </p>
+                            <p class="visible-xs visible-sm text-muted">
+                              <small>
+                                Dec, 2007 -
+                                  Dec, 2008
+                              </small>
+                            </p>
+                            <i></i>
+                            <div class="space-top labels">
+                            </div>
+                          </div>
+                          <div class="sidebar text-muted text-center hidden-xs hidden-sm">
+                            <p>
+                              <strong>Started:</strong>&nbsp;
+                              Dec, 2007
+                            </p>
+                            <p>
+                                <strong>Completion:</strong>&nbsp;
+                                Dec, 2008
+                            </p>
+                          </div>
+                        </li>
+                        <li class="card card-nested">
+                          <div class="content has-sidebar">
+                            <p class="clear-margin-sm">
+                              <strong>Informatics engineering, Bachelor</strong>,&nbsp;
+                              Universidad Técnica Federico Santa María
+                            </p>
+                            <p class="visible-xs visible-sm text-muted">
+                              <small>
+                                Dec, 2001 -
+                                  Dec, 2008
+                              </small>
+                            </p>
+                            <i></i>
+                            <div class="space-top labels">
+                            </div>
+                          </div>
+                          <div class="sidebar text-muted text-center hidden-xs hidden-sm">
+                            <p>
+                              <strong>Started:</strong>&nbsp;
+                              Dec, 2001
+                            </p>
+                            <p>
+                                <strong>Completion:</strong>&nbsp;
+                                Dec, 2008
+                            </p>
+                          </div>
+                        </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+                <div class="detail" id="awards">
+                  <div class="icon">
+                    <i class="fa fa-lg fa-trophy"></i>
+                    <span class="mobile-title">Awards</span>
+                  </div>
+                  <div class="info">
+                    <h4 class="title text-uppercase">
+                      Awards
+                    </h4>
+
+                    <div class="content">
+                      <ul class="list-unstyled">
+                          <li class="card card-nested">
+                            <div class="content has-sidebar">
+                              <p class="clear-margin-sm" itemprop="award">
+                                <strong>Scholarship</strong>,&nbsp;
+                                Conicyt
+                              </p>
+                              <p class="visible-xs visible-sm text-muted">
+                                <small>
+                                  Awarded on: Invalid date
+                                </small>
+                              </p>
+                              <p class="clear-margin"> Scholarship for graduate studies Conicyt. </p>
+                            </div>
+                            <div class="sidebar text-muted text-center hidden-xs hidden-sm">
+                              <p>
+                                <strong>Awarded on:</strong>&nbsp;
+                                Invalid date
+                              </p>
+                            </div>
+                          </li>
+                          <li class="card card-nested">
+                            <div class="content has-sidebar">
+                              <p class="clear-margin-sm" itemprop="award">
+                                <strong>Scholarship</strong>,&nbsp;
+                                DGIP-UTFSM
+                              </p>
+                              <p class="visible-xs visible-sm text-muted">
+                                <small>
+                                  Awarded on: Invalid date
+                                </small>
+                              </p>
+                              <p class="clear-margin"> Scholarship for graduate studies DGIP-UTFSM. </p>
+                            </div>
+                            <div class="sidebar text-muted text-center hidden-xs hidden-sm">
+                              <p>
+                                <strong>Awarded on:</strong>&nbsp;
+                                Invalid date
+                              </p>
+                            </div>
+                          </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+
+
+                <div class="detail" id="interests">
+                  <div class="icon">
+                    <i class="fa fa-lg fa-heart"></i>
+                    <span class="mobile-title">Interests</span>
+                  </div>
+                  <div class="info">
+                    <h4 class="title text-uppercase">
+                      Interests
+                    </h4>
+
+                    <div class="content">
+                      <ul class="list-unstyled">
+                          <li class="card card-nested">
+                            <p>
+                              <strong>Sports</strong>
+                            </p>
+
+                            <div class="space-top labels">
+                                <span class="label label-keyword">Mountaineering</span>
+                                <span class="label label-keyword">MTB</span>
+                                <span class="label label-keyword">Trekking</span>
+                            </div>
+                          </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="detail" id="references">
+                  <div class="icon">
+                    <i class="fa fa-lg fa-thumbs-up"></i>
+                    <span class="mobile-title">References</span>
+                  </div>
+                  <div class="info">
+                    <h4 class="title text-uppercase">
+                      References
+                    </h4>
+
+                    <div class="content">
+                      <ul class="list-unstyled">
+                          <li class="card card-nested">
+                            <p>
+                              <strong>Alejandro Cañete</strong>
+                            </p>
+                            <blockquote class="quote">
+                              <p class="clear-margin">Former Managing Director at Ifitec SA. Currently Quant Developer at Pan Alpha Trading acanete@gmail.com</p>
+                            </blockquote>
+                          </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.2.0/js/tooltip.js"></script>
+  </body>
+</html>
